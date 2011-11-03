@@ -1,3 +1,9 @@
+# revision 23092
+# category TLCore
+# catalog-ctan /language/hyphenation/srhyphc.tex
+# catalog-date 2007-02-28 00:02:05 +0100
+# catalog-license gpl
+# catalog-version 1.0a
 Name:		texlive-hyphen-serbian
 Version:	1.0a
 Release:	1
@@ -51,6 +57,7 @@ combined.
 %_texmf_language_dat_d/hyphen-serbian
 %_texmf_language_def_d/hyphen-serbian
 %_texmf_language_lua_d/hyphen-serbian
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -59,6 +66,8 @@ combined.
 %build
 
 %install
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
 mkdir -p %{buildroot}%{_texmf_language_dat_d}
 cat > %{buildroot}%{_texmf_language_dat_d}/hyphen-serbian <<EOF
 %% from hyphen-serbian:
