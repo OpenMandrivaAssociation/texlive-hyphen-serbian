@@ -49,13 +49,13 @@ combined.
 %install
 mkdir -p %{buildroot}%{_texmf_language_dat_d}
 cat > %{buildroot}%{_texmf_language_dat_d}/hyphen-serbian <<EOF
-%% from hyphen-serbian:
+\%\% from hyphen-serbian:
 serbian loadhyph-sr-latn.tex
 serbianc loadhyph-sr-cyrl.tex
 EOF
 mkdir -p %{buildroot}%{_texmf_language_def_d}
 cat > %{buildroot}%{_texmf_language_def_d}/hyphen-serbian <<EOF
-%% from hyphen-serbian:
+\%\% from hyphen-serbian:
 \addlanguage{serbian}{loadhyph-sr-latn.tex}{}{2}{2}
 \addlanguage{serbianc}{loadhyph-sr-cyrl.tex}{}{2}{2}
 EOF
