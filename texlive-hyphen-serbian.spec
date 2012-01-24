@@ -6,7 +6,7 @@
 # catalog-version 1.0a
 Name:		texlive-hyphen-serbian
 Version:	1.0a
-Release:	2
+Release:	3
 Summary:	Serbian hyphenation patterns
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/language/hyphenation/srhyphc.tex
@@ -49,16 +49,18 @@ combined.
 %install
 mkdir -p %{buildroot}%{_texmf_language_dat_d}
 cat > %{buildroot}%{_texmf_language_dat_d}/hyphen-serbian <<EOF
-\%\% from hyphen-serbian:
+\%% from hyphen-serbian:
 serbian loadhyph-sr-latn.tex
 serbianc loadhyph-sr-cyrl.tex
 EOF
+perl -pi -e 's|\\%%|%%|;' %{buildroot}%{_texmf_language_dat_d}/hyphen-serbian
 mkdir -p %{buildroot}%{_texmf_language_def_d}
 cat > %{buildroot}%{_texmf_language_def_d}/hyphen-serbian <<EOF
-\%\% from hyphen-serbian:
+\%% from hyphen-serbian:
 \addlanguage{serbian}{loadhyph-sr-latn.tex}{}{2}{2}
 \addlanguage{serbianc}{loadhyph-sr-cyrl.tex}{}{2}{2}
 EOF
+perl -pi -e 's|\\%%|%%|;' %{buildroot}%{_texmf_language_def_d}/hyphen-serbian
 mkdir -p %{buildroot}%{_texmf_language_lua_d}
 cat > %{buildroot}%{_texmf_language_lua_d}/hyphen-serbian <<EOF
 -- from hyphen-serbian:
