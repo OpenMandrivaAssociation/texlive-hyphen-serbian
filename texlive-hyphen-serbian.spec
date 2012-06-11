@@ -1,4 +1,4 @@
-# revision 23092
+# revision 25990
 # category TLCore
 # catalog-ctan /language/hyphenation/srhyphc.tex
 # catalog-date 2007-02-28 00:02:05 +0100
@@ -6,7 +6,7 @@
 # catalog-version 1.0a
 Name:		texlive-hyphen-serbian
 Version:	1.0a
-Release:	3
+Release:	4
 Summary:	Serbian hyphenation patterns
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/language/hyphenation/srhyphc.tex
