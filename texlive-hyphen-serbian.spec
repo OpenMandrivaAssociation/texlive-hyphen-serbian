@@ -81,3 +81,25 @@ cat > %{buildroot}%{_texmf_language_lua_d}/hyphen-serbian <<EOF
 		hyphenation = 'hyph-sh-latn.hyp.txt,hyph-sh-cyrl.hyp.txt',
 	},
 EOF
+
+
+%changelog
+* Mon Jun 11 2012 Paulo Andrade <pcpa@mandriva.com.br> 1.0a-4
++ Revision: 804812
+- Update to latest release.
+
+* Tue Jan 24 2012 Paulo Andrade <pcpa@mandriva.com.br> 1.0a-3
++ Revision: 767584
+- Add workaround to rpm bug that broke hyphenation files
+
+* Wed Jan 11 2012 Paulo Andrade <pcpa@mandriva.com.br> 1.0a-2
++ Revision: 759936
+- Rebuild to reduce used resources
+
+* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 1.0a-1
++ Revision: 718678
+- texlive-hyphen-serbian
+- texlive-hyphen-serbian
+- texlive-hyphen-serbian
+- texlive-hyphen-serbian
+
