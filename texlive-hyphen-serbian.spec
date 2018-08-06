@@ -1,15 +1,8 @@
-# revision 25990
-# category TLCore
-# catalog-ctan /language/hyphenation/srhyphc.tex
-# catalog-date 2007-02-28 00:02:05 +0100
-# catalog-license gpl
-# catalog-version 1.0a
 Name:		texlive-hyphen-serbian
-Version:	1.0a
-Release:	2
+Version:	20180303
+Release:	1
 Summary:	Serbian hyphenation patterns
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/language/hyphenation/srhyphc.tex
 License:	GPL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/hyphen-serbian.tar.xz
 BuildArch:	noarch
