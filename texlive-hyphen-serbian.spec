@@ -1,5 +1,5 @@
 Name:		texlive-hyphen-serbian
-Version:	20181105
+Version:	20190406
 Release:	1
 Summary:	Serbian hyphenation patterns
 Group:		Publishing
