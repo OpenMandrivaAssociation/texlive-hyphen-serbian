@@ -1,10 +1,10 @@
 Name:		texlive-hyphen-serbian
-Version:	20190406
+Version:	58609
 Release:	1
 Summary:	Serbian hyphenation patterns
 Group:		Publishing
 License:	GPL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/hyphen-serbian.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/hyphen-serbian.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -20,12 +20,12 @@ should only use 'serbian' which has patterns in both scripts
 combined.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -37,7 +37,7 @@ combined.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0
+%autosetup -p1 -c
 
 %build
 
@@ -79,25 +79,3 @@ cat > %{buildroot}%{_texmf_language_lua_d}/hyphen-serbian <<EOF
 		hyphenation = 'hyph-sh-latn.hyp.txt,hyph-sh-cyrl.hyp.txt',
 	},
 EOF
-
-
-%changelog
-* Mon Jun 11 2012 Paulo Andrade <pcpa@mandriva.com.br> 1.0a-4
-+ Revision: 804812
-- Update to latest release.
-
-* Tue Jan 24 2012 Paulo Andrade <pcpa@mandriva.com.br> 1.0a-3
-+ Revision: 767584
-- Add workaround to rpm bug that broke hyphenation files
-
-* Wed Jan 11 2012 Paulo Andrade <pcpa@mandriva.com.br> 1.0a-2
-+ Revision: 759936
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 1.0a-1
-+ Revision: 718678
-- texlive-hyphen-serbian
-- texlive-hyphen-serbian
-- texlive-hyphen-serbian
-- texlive-hyphen-serbian
-
