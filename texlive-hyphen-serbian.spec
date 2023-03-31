@@ -1,6 +1,6 @@
 Name:		texlive-hyphen-serbian
 Version:	58609
-Release:	1
+Release:	2
 Summary:	Serbian hyphenation patterns
 Group:		Publishing
 License:	GPL
